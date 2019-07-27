@@ -21,6 +21,16 @@ public class StatsCalculatorShould {
         assertThat(statsCalculator.process(new int[]{0}), is("o) minimum value = 0\n" +
                 "    o) maximum value = 0\n" +
                 "    o) number of elements in the sequence = 1\n" +
-                "    o) average value = 0"));
+                "    o) average value = 0.0"));
+    }
+
+    @Test
+    public void print_stats_for_a_sequence_that_contains_two_numbers() {
+
+        StatsCalculator statsCalculator = new StatsCalculator();
+        assertThat(statsCalculator.process(new int[]{0,1}), is("o) minimum value = 0\n" +
+                "    o) maximum value = 1\n" +
+                "    o) number of elements in the sequence = 2\n" +
+                "    o) average value = 0.5"));
     }
 }
